@@ -9,9 +9,9 @@ import LeadsIcon from "../../icons/LeadsIcon";
 import PaymentsIcon from "../../icons/PaymentsIcon";
 import SettingsIcon from "../../icons/SettingsIcon";
 
-const ICON_COMPILER = (Component) => {
-  return (isSelected, colorGray) => (
-    <Component isSelected={isSelected} colorGray={colorGray} />
+const wrapIconComponent = (Component) => {
+  return (isSelected, color) => (
+    <Component isSelected={isSelected} color={color} />
   );
 };
 
@@ -19,52 +19,52 @@ export const SCHEMA = [
   {
     title: "Dashboard",
     href: "/dashboard",
-    icon: ICON_COMPILER(DashboardIcon),
+    icon: wrapIconComponent(DashboardIcon),
   },
   {
     title: "Inventory",
     href: "/inventory",
-    icon: ICON_COMPILER(InventoryIcon),
+    icon: wrapIconComponent(InventoryIcon),
   },
   {
     title: "Leads",
     href: "/leads",
-    icon: ICON_COMPILER(LeadsIcon),
+    icon: wrapIconComponent(LeadsIcon),
   },
   {
     title: "Deals",
     href: "/deals",
-    icon: ICON_COMPILER(DealsIcon),
+    icon: wrapIconComponent(DealsIcon),
   },
   {
     title: "Accounts",
     href: "/accounts",
-    icon: ICON_COMPILER(AccountsIcon),
+    icon: wrapIconComponent(AccountsIcon),
   },
   {
     title: "Payments",
     href: "/payments",
-    icon: ICON_COMPILER(PaymentsIcon),
+    icon: wrapIconComponent(PaymentsIcon),
   },
   {
     title: "Collections",
     href: "/collections",
-    icon: ICON_COMPILER(CollectionsIcon),
+    icon: wrapIconComponent(CollectionsIcon),
   },
   {
     title: "Accounting",
     href: "/accounting",
-    icon: ICON_COMPILER(AccountingIcon),
+    icon: wrapIconComponent(AccountingIcon),
   },
   {
     title: "Insights",
     href: "/insights",
-    icon: ICON_COMPILER(InsightsIcon),
+    icon: wrapIconComponent(InsightsIcon),
   },
   {
     title: "Settings",
     href: "/settings",
-    icon: ICON_COMPILER(SettingsIcon),
+    icon: wrapIconComponent(SettingsIcon),
   },
 ];
 
@@ -73,4 +73,13 @@ export const SIDEBAR_OPTION = {
   NOT_COLLAPSED: "notCollapsed",
 };
 
-export const SIDEBAR_COLLAPSED = "isCollapsed";
+export const THEME = {
+  dark: {
+    icon_color: "#56657f",
+  },
+  light: {
+    icon_color: "#D7D7DE",
+  },
+};
+
+export const SIDEBAR_COLLAPSED_STORAGE_KEY = "isCollapsed";

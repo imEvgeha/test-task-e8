@@ -1,6 +1,6 @@
 import { Sidebar } from "flowbite-react";
 import React from "react";
-import CollapseIcon from "../../icons/CollapseIcon";
+import CollapseIcon from "../../../../icons/CollapseIcon";
 import "./SideBarHeader.css";
 
 const SideBarHeader = ({ isCollapsed, handleCollapse, isDarkMode }) => {
@@ -17,10 +17,10 @@ const SideBarHeader = ({ isCollapsed, handleCollapse, isDarkMode }) => {
             isDarkMode ? "text-white" : "text-black"
           } text-2xl font-bold cursor-pointer`}
         >
-          {isCollapsed ? "E" : `ELEV`}
+          {isCollapsed ? "E" : "ELEV"}
           <div className="color-blue">8</div>
         </a>
-        <div className="pl-1 cursor-pointer" onClick={() => handleCollapse()}>
+        <div className="pl-0.5 cursor-pointer" onClick={() => handleCollapse()}>
           <CollapseIcon isDarkMode={isDarkMode} isCollapsed={isCollapsed} />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Dashboard from "./components/Dashboard/Dashboard";
-import WithSideBar from "./components/WithSideBar/WithSideBar";
+import WithSideBar from "./components/SideBar/WithSideBar";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <WithSideBar setIsDarkMode={handleThemeChange} isDarkMode={isDarkMode}>
+      <WithSideBar toggleTheme={handleThemeChange} isDarkMode={isDarkMode}>
         <Dashboard />
       </WithSideBar>
     </div>

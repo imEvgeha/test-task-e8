@@ -1,16 +1,16 @@
 import { Sidebar } from "flowbite-react";
 import React from "react";
-import LogOutIcon from "../../icons/LogOutIcon";
-import ModeIcon from "../../icons/ModeIcon";
+import LogOutIcon from "../../../../icons/LogOutIcon";
+import ModeIcon from "../../../../icons/ModeIcon";
 import "./SideBarFooter.css";
 
-const SideBarFooter = ({ setIsDarkMode, isDarkMode }) => {
+const SideBarFooter = ({ toggleTheme, isDarkMode }) => {
   return (
     <div>
       <Sidebar.Item
-        onClick={() => setIsDarkMode()}
+        onClick={() => toggleTheme()}
         icon={() => <ModeIcon isDarkMode={isDarkMode} />}
-        className="side-bar-item"
+        className="side-bar-item cursor-pointer"
       >
         <div
           className={`${
@@ -24,7 +24,7 @@ const SideBarFooter = ({ setIsDarkMode, isDarkMode }) => {
       <Sidebar.Item
         onClick={() => null}
         icon={() => <LogOutIcon />}
-        className="side-bar-item"
+        className="side-bar-item cursor-pointer"
       >
         <div
           className={`${
