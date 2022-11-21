@@ -1,0 +1,12 @@
+.side-bar-item {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  .light-mode {
+    color: #334d6e;
+  }
+
+  .dark-mode {
+    color: #d7d7de;
+  }
+}

@@ -1,0 +1,7 @@
+.sidebar-items-height {
+  height: calc(100vh - 205px);
+}
+
+.sidebar-items-collapsed {
+  margin-top: 113px;
+}
